@@ -1,0 +1,56 @@
+neighbourhood
+-
+neighbourhood_id INT PK
+neighbourhood_name VARCHAR
+
+income
+-
+neighbourhood_id INT FK - neighbourhood.neighbourhood_id PK
+neighborhood_name VARCHAR
+median_income DOUBLE
+average_income DOUBLE
+
+crime
+-
+neighbourhood_id INT FK - neighbourhood.neighbourhood_id PK
+neighborhood_name VARCHAR
+total_average_crime_rate DOUBLE
+
+ethnicity
+-
+neighbourhood_id INT FK - neighbourhood.neighbourhood_id PK
+neighborhood_name VARCHAR
+oceania_origins INT
+asian_origins INT
+north_american_aboriginal_origins INT
+other_north_american_origins INT
+latin_origins INT
+european_origins INT
+african_origins INT
+caribbean_origins INT
+
+restaurant
+-
+restaurant_id INT PK
+category VARCHAR
+restaurant_name VARCHAR
+price_range VARCHAR
+latitude DOUBLE
+longitude DOUBLE
+neighbourhood_id INT FK - neighbourhood.neighbourhood_id
+neighborhood_name VARCHAR
+
+neighbourhood_restaurant
+-
+neighbourhood_id INT FK - neighbourhood.neighbourhood_id PK
+neighborhood_name VARCHAR
+number_of_restaurants INT
+
+yelp_rating
+-
+restaurant_id INT
+restaurant_name VARCHAR
+category VARCHAR
+ratings DOUBLE
+review_counts INT
+zip_code VARCHAR
